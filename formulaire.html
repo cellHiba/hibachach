@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+        #signupForm {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 25px; /* Bords plus arrondis pour le formulaire */
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+            width: 400px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        #signupForm:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+    
+        #signupForm div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    
+        label {
+            width: 100px;
+            margin-right: 10px;
+            text-align: right;
+            font-weight: bold;
+            color: #ccc;
+            text-align:left;
+        }
+    
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        input[type="file"] {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #444;
+            border-radius: 25px; /* Bords ovoïdes */
+            background-color: #333;
+            color: #e0e0e0;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            width: 150%; /* Assure que tous les champs ont la même largeur */
+
+        }
+    
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            border-color: #666;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+        }
+    
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg,gray, #fdfeff,rgb(8, 8, 8));
+            color: white;
+            border: none;
+            border-radius: 25px; /* Bords ovoïdes */
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+    #returButton {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg,gray, #fdfeff,rgb(8, 8, 8))
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+        margin-top: 10px; /* Espacement par rapport au bouton de soumission */
+}
+
+#returButton:hover {
+    background: linear-gradient(135deg,gray, #fdfeff,rgb(8, 8, 8));
+    transform: scale(1.05);
+}
+
+    
+        button[type="submit"]:hover {
+            background: linear-gradient(135deg,gray, #fdfeff,rgb(8, 8, 8));
+            transform: scale(1.05);
+        }
+    
+        .erreur {
+            color: #ff4d4d;
+            font-size: 12px;
+            margin-left: 10px;
+            display: block;
+            margin-top: 5px;
+        }
+    
+        /* Style pour le bouton du champ file */
+        input[type="file"] {
+            padding: 10px; /* Ajustement pour le champ file */
+        }
+    
+        input[type="file"]::file-selector-button {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 25px; /* Bords ovoïdes */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        input[type="file"]::file-selector-button:hover {
+            background-color: #666;
+        }
+    
+        /* Animation pour les champs */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        #signupForm div {
+            animation: fadeIn 0.5s ease-out;
+        }
+    
+        /* Style pour le sélecteur de sexe */
+        select {
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%23e0e0e0" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 12px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="signupForm">
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" >
+            <span class="erreur" id="errNom"></span>
+        </div>
+        <div>
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" >
+            <span class="erreur" id="errPrenom"></span>
+        </div>
+        <div>
+            <label for="profession">Profession</label>
+            <input type="text" id="profession" >
+            <span class="erreur" id="errProfession"></span>
+        </div>
+        <div>
+            <label for="sexe">Genre</label>
+            <select id="sexe">
+                <option>Femme</option>
+                <option>Homme</option>
+            </select>
+        </div>
+        <div>
+            <label for="telephone">Téléphone</label>
+            <input type="text" id="telephone" >
+            <span class="erreur" id="errTelephone"></span>
+        </div>
+        <div>
+            <label for="dateNaissance">Date de naissance</label>
+            <input type="date" id="dateNaissance" >
+            <span class="erreur" id="errDateNaissance"></span>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" >
+            <span class="erreur" id="errEmail"></span>
+        </div>
+        <div>
+            <label for="motpasse">Mot de passe</label>
+            <input type="password" id="motpasse" >
+            <span class="erreur" id="errMotpasse"></span>
+        </div>
+        <div>
+            <label for="picture">Photo</label>
+            <input type="file" id="picture" accept="image/*">
+            <span class="erreur" id="errPicture"></span>
+        </div>
+        <button type="submit" style="color: #0c0c0c;">S'inscrire</button>
+        <button type="button" id="returButton" style="color: #0c0c0c;">
+            <a href="portfolio.html" style="text-decoration: none; color: inherit;">Retour au portfolio</a>
+        </button>
+    </form>
+    <script>
+        // Fonction pour afficher les messages d'erreur
+        function erreur(elementId, message) {
+            const errorElement = document.getElementById(elementId);
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+        }
+
+        // Fonction pour effacer les messages d'erreur
+        function clearErrors() {
+            const errors = document.querySelectorAll('.erreur');
+            errors.forEach(error => {
+                error.textContent = '';
+                error.style.display = 'none';
+            });
+        }
+
+        // Écouteur d'événement pour la soumission du formulaire
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            clearErrors();
+
+            let tester = true;
+
+            // Validation du nom
+            const nom = document.getElementById('nom').value;
+            if (nom.trim() === '' || !/^[A-Z][a-zA-Z]+$/.test(nom)) {
+                erreur('errNom', 'Le nom est requis et doit commencer par une majuscule.');
+                tester = false;
+            }
+
+            // Validation du prénom
+            const prenom = document.getElementById('prenom').value;
+            if (prenom.trim() === '' || !/^[A-Z][a-zA-Z]+$/.test(prenom)) {
+                erreur('errPrenom', 'Le prénom est requis et doit commencer par une majuscule.');
+                tester = false;
+            }
+
+            // Validation de la profession
+            const prof = document.getElementById('profession').value;
+            if (prof.trim() === '') {
+                erreur('errProfession', 'La profession est requise.');
+                tester = false;
+            }
+
+            // Validation de l'email
+            const email = document.getElementById('email').value;
+            const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!regexEmail.test(email)) {
+                erreur('errEmail', 'Veuillez entrer un email valide (ex: hiba@gmail.com).');
+                tester = false;
+            }
+
+            // Validation du téléphone
+            const tel = document.getElementById('telephone').value;
+            if (!/^[0][0-9]{9}$/.test(tel)) {
+                erreur('errTelephone', 'Veuillez entrer un numéro de téléphone valide (ex: 0613756505).');
+                tester = false;
+            }
+
+            // Validation de la date de naissance
+            const dateNaissance = document.getElementById('dateNaissance').value;
+            if (dateNaissance === '') {
+                erreur('errDateNaissance', 'La date de naissance est requise.');
+                tester = false;
+            }
+
+            // Validation du mot de passe
+            const mpasse = document.getElementById('motpasse').value;
+            if (mpasse.length < 6) {
+                erreur('errMotpasse', 'Le mot de passe doit contenir au moins 6 caractères.');
+                tester = false;
+            }
+
+            // Si tout est valide, afficher une pop-up
+            if (tester) {
+                alert('Inscription réussie ! Bienvenue sur notre site web.');
+                document.getElementById('signupForm').reset();
+            }
+            
+        });
+    </script>
+    
+</body>
+</html>

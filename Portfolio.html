@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      background: linear-gradient(135deg,black,gray);
+      color: #ffffff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Barre de navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1e1e1e;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: gray;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 20px 20px; /* Ajouter du padding en haut pour éviter que le contenu soit caché par la barre de navigation */
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    h2 {
+      color: gray;
+      margin-top: 30px;
+
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .profile .photo {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      margin-right: 20px;
+      border: 7px solid gray;
+    }
+
+    .profile .info {
+      flex: 1;
+    }
+
+    .profile .info p {
+      color: #cccccc;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills ul li {
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 8px 15px;
+      background-color: gray;
+      color: white;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    .projects {
+      margin-top: 30px;
+    }
+
+    .project-card {
+      background-color: #1e1e1e;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: gray;
+    }
+
+    .contact {
+      margin-top: 30px;
+    }
+
+    .contact a {
+      color: gray;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      margin-right: 10px;
+      color: gray;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: gray;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: gray;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #1e1e1e;
+      color: #cccccc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <nav>
+    <a href="#propos">À propos</a>
+    <a href="#skills">Compétences</a>
+    <a href="#projects">Projets</a>
+    <a href="#contact">Contact</a>
+    <a href="formulaire.html" target="_blank" >Se Connecter</a>
+  </nav>
+
+  <div class="container">
+    <h4 style="text-align: center;">Bienvenue sur mon portfolio</h4>
+    <!-- Section À propos -->
+    <section id="about">
+      <div class="profile">
+        <img src="WhatsApp Image 2025-02-14 at 18.53.16.jpeg" alt="Ma photo" class="photo">
+        <div class="info">
+          <h2 id="mon-nom-complet" style="color: rgb(99, 93, 93);font-size: 30px;">Hiba Chach</h2>
+          <p>Étudiante en informatique & ingénierie des données.</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      
+      <h4 style="text-decoration: underline;color: gray;"id="propos" >À propos de moi</h4>
+      <p>
+        Je suis étudiante en première année du cycle d'ingénierie en informatique et ingénierie des données à l'ENSA de Khouribga. Passionnée par les technologies et l'analyse des données, je souhaite contribuer à des projets innovants qui allient programmation et gestion de l’information.
+      </p>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="skills">
+      <h4 style="text-decoration: underline;color: gray;">Mes compétences</h4>
+      <div class="skills">
+        <ul>
+          <li>Python</li>
+          <li>MySQL</li>
+          <li>Matlab</li>
+          <li>C</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects">
+      <h4 style="text-decoration: underline;color: gray;" >Mes projets</h4>
+      <div class="projects">
+        <div class="project-card">
+          <h4>Projet 1 : Pomodoro-Timer</h4>
+          <p>Le Pomodoro-Timer est une application web qui aide à gérer son temps en alternant des sessions de travail de 25 minutes et des pauses de 5 minutes, avec une pause longue de 15 minutes après 4 cycles. Il inclut un suivi des tâches pour organiser son travail efficacement.</p>>
+          <a href="Pomodoro-Timer.html" class="btn">Voir le projet</a>
+        </div>
+        <div class="project-card">
+          <h4>Projet 2 :gestion de bibliothèque </h4>
+          <p> Ce projet permet d'enregistrer, rechercher, emprunter et retourner des livres via une interface web en Flask, tout en utilisant MySQL pour stocker les informations des livres et des utilisateurs..</p>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+      <h4 style="text-decoration: underline; color: gray;">Contactez-moi</h4>
+      <div class="contact">
+        <p>Vous pouvez me contacter par email ou via LinkedIn :</p>
+        <a href="mailto:hibachach1980@gmail.com" >Envoyer un email</a>
+        <br>
+        <a href="https://linkedin.com/in/hiba-chach-b86511349" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
