@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<livre-racine>
+  <!--livre 1-->
+  <livre id='1' >
+     <titre>Boite a mervaille</titre>
+     <Auteur>Mohamed el safrioui</Auteur>
+     <prix>200</prix>
+</livre>
+<!--livre 2-->
+<livre id='2'>
+    <titre>Le Petit Prince</titre>
+    <Auteur>Antoine de Saint-Exupéry</Auteur>
+    <prix>300</prix>
+</livre>
+<!--livre 3-->
+<livre id='3'>
+    <titre>Harry Potter à l'école des sorciers</titre>
+    <Auteur>J.K. Rowling</Auteur>
+    <prix>400</prix>
+</livre>
+<!--livre 4-->
+<livre id='4'>
+    <titre>Orgueil et Préjugés</titre>
+    <Auteur>Jane Austen</Auteur>
+    <prix>500</prix>
+</livre>
+</livre-racine>
